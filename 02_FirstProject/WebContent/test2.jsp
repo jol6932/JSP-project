@@ -8,11 +8,11 @@
 </head>
 <body>
 <h1>GET</h1>
-<form method="get" action="HelloServlet">
+<form method="get" action="HelloServlet"> 			<!-- url mapping 과 동일한 이름으로 해야함(서블릿 이름) -->
 	이름 : <input type="text" name="name"><br><!-- 시험에나옴 -->
 	아이디 : <input type="text" name="id"><br> 
 	비밀번호 : <input type="password" name="pwd"><br>
-	<input type="submit" value="GET 방식으로 전송">
+	<input type="submit" value="GET 방식으로 전송">	<!-- submit 은 form태그 안에 있는 애들만 get방식으로 제출 -->
 </form>
 <a href="HelloServlet">링크로 GET 방식</a>
 <hr>
@@ -24,7 +24,7 @@
 	<input type="submit" value="POST 방식으로 전송">
 </form>
 <h1>JSP</h1>
-<form method="get" action="test3.jsp"><!-- 서버로 사용될 JSP파일 이름 입력 -->
+<form method="get" action="test3.jsp">				<!-- 서버로 사용될 JSP파일 이름 입력 -->
 	이름 : <input type="text" name="name"><br>
 	아이디 : <input type="text" name="id"><br> 
 	비밀번호 : <input type="password" name="pwd"><br>
