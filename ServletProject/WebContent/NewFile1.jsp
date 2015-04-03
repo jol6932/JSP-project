@@ -38,7 +38,8 @@
     	<input type="checkbox" name = "hb" value="축구">축구
     	<input type="checkbox" name = "hb" value="야구">야구
     	<input type="checkbox" name = "hb" value="농구">농구
-    	<input type="checkbox" name = "hb" value="배구">배구<br>
+    	<input type="checkbox" name = "hb" value="배구">배구<br> 
+    	<!-- name을 똑같이 줘야 getParameterValues 이용 가능 -->
     	
     	<input type="date" name="date"><br>
     	<select name="select">

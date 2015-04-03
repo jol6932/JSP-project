@@ -58,6 +58,7 @@ public class TestServlet extends HttpServlet {
 			{
 				out.print(hb[i]+"<br>");
 			}
+			out.close();//out이 끝나면 꺼줘야함
 		}
 		
 			
