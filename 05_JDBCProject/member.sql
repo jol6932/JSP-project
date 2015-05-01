@@ -24,5 +24,5 @@ update MEMBER
 set addr = '인천'
 where id = 'test1'
 
-delete from member
-where id = 'test1'
+drop table member
+
