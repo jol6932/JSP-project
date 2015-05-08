@@ -45,7 +45,8 @@
     pstmt.setString(6, adr);
     
     int result = pstmt.executeUpdate();//executeUpdate() == insert,delete,update 문 실행할떄
-    out.print(result);
+    if(result == 1)
+    	response.sendRedirect("list");
    
     //4.DB연결 끊기
     pstmt.close();

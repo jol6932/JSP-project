@@ -63,19 +63,21 @@ public class ListServlet extends HttpServlet {
 			ResultSet rs = pstmt.executeQuery();//ResultSet = select문 결과값 저장하는 데이터타입
 			//선언하면 커서단위로 처리하는데 맨1번째 커서 전 커서로 가리키고 있음(존재하지않는 0번째)
 			out.print("<table border=1>");
+			
+			
+			
+			
 			while(rs.next()){//rs.next = 다음 커서로 이동함 Return type boolean -> 다음줄로 이동했는데 데이터가 있으면 true,없으면 false
-				String gd = null;
-				if(rs.getString("gender").equals("m"))
-					gd = "남자";
-				else if(rs.getString("gender").equals("f"))
-					gd = "여자";
+				
 					
 				out.print("<tr>");
-				out.print("<td>" +rs.getString("id")+"</td>");//데이터를 가져올때는 컬럼별로 가져와야함
+				out.print("<td><a href='view?id="+rs.getString("id")+"'>" +rs.getString("id")+"</a></td>");//데이터를 가져올때는 컬럼별로 가져와야함
 				out.println("<td>" +rs.getString("name")+"</td>");
 				out.println("<td>" +rs.getString("age")+"</td>");
 				out.println("<td>" +rs.getString("addr")+"</td>");
-				out.println("<td>" +gd+"</td>");
+				out.println("<td>" +rs.getString("gender")+"</td>");
+				out.print("</tr>");
+				
 			}
 			out.print("<table>");
 		} catch (SQLException e) {
