@@ -14,4 +14,5 @@ attachment varchar2(50)
 insert into board
 values(board_seq.nextval,'야옹이','배고프다','야아아오오오오옹',default,default,'파일명')
 select * from board
+order by num desc
 

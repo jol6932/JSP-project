@@ -2,7 +2,7 @@ package board.dto;
 
 import java.util.Date;
 
-public class Board {
+public class Board {//데이터를 잠깐 저장했다가 꺼낼때 사용함
 	private int num;
 	private String name;
 	private String title;
