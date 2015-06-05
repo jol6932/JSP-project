@@ -23,9 +23,9 @@ public class BoardListAction implements Action {
 		List<Board> list = dao.selectAllBoards();
 		
 		request.setAttribute("list", list);//request 영역에 list 담음
+		//데이터 영역 참조하는 부분
 		
-		
-		String url = "./board/list.jsp";
+		String url = "./board/list.jsp"; //보여지는 부분으로 가는부분
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}

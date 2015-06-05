@@ -51,16 +51,21 @@ public class BoardController extends HttpServlet {
 			action.execute(request, response);//동적 바인딩:부모형 객체로 선언 되어 있지만 알맞는 메소드를 찾아서 알아서 실행시킴
 		}
 		
-		if(command.equals("/write.board")){//글쓰기
-			System.out.println("write");
+		else if(command.equals("/write.board")){//글쓰기
+			
 			Action action = new BoardWriteAction();
 			action.execute(request, response);
 			
 		}
 		
-		if(command.equals("/list.board")){//리스트
-			System.out.println("list");
+		else if(command.equals("/list.board")){//리스트
+			
 			Action action = new BoardListAction();
+			action.execute(request, response);
+		}
+		else if(command.equals("/view.board")){//리스트
+			
+			Action action = new BoardViewAction();
 			action.execute(request, response);
 		}
 	}

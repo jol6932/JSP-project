@@ -31,7 +31,7 @@
 		</nav>
 		
 		<!-- 게시판 글쓰기  시작  -->
-		<form class="form-horizontal" method = "post" action="write.board">
+		<form class="form-horizontal" method = "post" enctype="multipart/form-data" action="write.board">
 		  <fieldset>
 		    <legend>게시판 글쓰기 </legend>
 		    
@@ -52,7 +52,7 @@
 		    <div class="form-group">
 		      <label for="textArea" class="col-lg-2 control-label">내용 : </label>
 		      <div class="col-lg-10">
-		        <textarea class="form-control" rows="10" name = "textArea" id="textArea"></textarea>
+		        <textarea class="form-control" rows="10" name = "textarea" id="textarea"></textarea>
 		      </div>
 		    </div>
 		    
