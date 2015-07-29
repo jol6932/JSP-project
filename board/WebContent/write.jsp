@@ -9,7 +9,7 @@
 <body>
 <form action ="Insert.do" method="post" enctype="multipart/form-data" onsubmit="return formCheck();">
 	제목:<input type="text" name="title"/><br/>
-	작성자:<input type="text" name="writer"/><br/>
+	작성자:<%=(String)session.getAttribute("id") %><br/>
 	내용:<input type="text" name="content"/><br/>
 	첨부파일:<input type="file" name="filename"><br/>
 	<input type="submit"/>

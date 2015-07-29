@@ -2,6 +2,7 @@ package board.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -19,6 +20,7 @@ public class InsertAction implements CommandAction{
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=utf-8");
 
+		HttpSession session = request.getSession();
 		MultipartRequest multi  = null;
 		int sizeLimit = 10*1024;//10메가바이트
 		
@@ -28,7 +30,7 @@ public class InsertAction implements CommandAction{
 		
 		String filename = multi.getFilesystemName("filename");
 		String title = multi.getParameter("title");
-		String writer = multi.getParameter("writer");
+		String writer = (String)session.getAttribute("id");
 		String regdate = multi.getParameter("regdate");
 		String content = multi.getParameter("content");
 

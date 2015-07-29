@@ -12,8 +12,17 @@
 </head>
 
 <body>
-<h1>게시글 리스트</h1>		<!-- 헤드라인 형식의 글씨 표현 -->
-<table>
+<h1>게시글 리스트</h1><a href='LogoutAction'>로그아웃</a>
+<% 
+
+
+HttpSession s = request.getSession();
+if(s.getAttribute("id").equals("admin")){
+%>
+<a href="MemberList?apage=1">회원목록</a>
+<%} %>
+
+<table border=1>
 	<tr>				<!-- 행 정의 -->
 		<th>번호</th>		<!-- table에서 강조하고 싶은 칼럼 나타낼떄 -->
 		<th>제목</th>

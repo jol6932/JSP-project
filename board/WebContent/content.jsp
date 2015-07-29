@@ -51,8 +51,8 @@
 		
 	</tr>
 </table>
-<a href="delete.jsp?idx=<%=board.getIdx()%>">삭제</a>
-<a href="list.do">목록</a>
+<a href="delete.jsp?idx=<%=board.getIdx()%>&writer=<%=board.getWriter()%>">삭제</a>
+<a href="list.do">글목록</a>
 
 </body>
 </html>
